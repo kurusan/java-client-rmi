@@ -213,5 +213,25 @@ public class Invoke {
 		}
 		return temp;
 	}
+	
+	public List<Agency> getAgencyByName(String agencyName) {
+		try {
+			return this.remoteObject.getAgencyByName(agencyName);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public List<Agency> getAgencyByID(String agencyID) {
+		try {
+			return this.remoteObject.getAgencyByID(agencyID);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 }
